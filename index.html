@@ -26,16 +26,9 @@
         .wrapper { padding: 20px 4%; min-height: calc(100vh - 215px); display: flex; align-items: stretch; }
         .grid-custom { display: grid; grid-template-columns: repeat(6, 1fr); gap: 15px; width: 100%; }
         
-        /* PHOTOS : REMPLISSAGE TOTAL SANS BORDURES */
         .tile { position: relative; border-radius: 8px; border: 1px solid #333; cursor: pointer; background: #000; overflow: hidden; display: flex; align-items: flex-end; }
-        .tile-bg { 
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
-            background-size: cover; /* Étire l'image pour remplir tout le cadre */
-            background-position: center; 
-            opacity: 0.5; 
-            transition: transform 0.6s ease, opacity 0.6s ease;
-        }
-        .tile:hover .tile-bg { transform: scale(1.12); opacity: 0.8; }
+        .tile-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; opacity: 0.5; transition: transform 0.6s ease, opacity 0.6s ease; }
+        .tile:hover .tile-bg { transform: scale(1.1); opacity: 0.7; }
         
         .prio-1, .prio-2 { grid-column: span 3; } 
         .prio-3, .prio-4 { grid-column: span 2; } 
@@ -51,27 +44,24 @@
         .btn-left { background: var(--green); color: white; }
         .btn-right { background: var(--gold); color: black; }
 
-        /* MODAL GRIS AVEC SELECTEURS FIXÉS */
-        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.92); z-index: 999; align-items: center; justify-content: center; padding: 15px; }
-        .modal-content { background: #0c0c0c; border: 1.5px solid var(--silver); width: 100%; max-width: 650px; border-radius: 12px; max-height: 95vh; overflow-y: auto; }
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 999; align-items: center; justify-content: center; padding: 15px; }
+        .modal-content { background: #0c0c0c; border: 1.5px solid var(--silver); width: 100%; max-width: 600px; border-radius: 12px; max-height: 95vh; overflow-y: auto; }
         .form-container { padding: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
         .full { grid-column: span 2; }
         
-        /* STYLE DES MENUS DÉROULANTS */
         input, select, textarea { 
             width: 100%; background: #1a1a1a; border: 1px solid #333; padding: 12px; color: white; border-radius: 6px; font-size: 0.95rem; font-family: 'Montserrat';
-            appearance: none; /* Nettoyage du style par défaut */
+            appearance: none;
             background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: right 15px center;
+            background-repeat: no-repeat; background-position: right 15px center;
         }
 
-        .fast-contact { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 5px; padding-top: 15px; border-top: 1px solid #222; }
-        .btn-fast { padding: 12px; border-radius: 8px; text-decoration: none; color: white; font-family: 'Bruno Ace SC'; font-size: 0.6rem; font-weight: 900; display: flex; flex-direction: column; align-items: center; gap: 8px; background: #1a1a1a; border: 1px solid #333; text-align: center; }
-        .btn-fast img { width: 25px; height: 25px; }
-        .f-tel { border-color: var(--red); } .f-sms { border-color: var(--blue); } .f-wa { border-color: var(--green); }
-
         .btn-submit { background: var(--red); color: white; border: none; padding: 16px; width: 100%; font-family: 'Bruno Ace SC'; font-size: 1rem; font-weight: 900; cursor: pointer; font-style: italic; border-radius: 6px; }
+
+        .fast-contact { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 5px; padding-top: 15px; border-top: 1px solid #222; }
+        .btn-fast { padding: 12px; border-radius: 8px; text-decoration: none; color: white; font-family: 'Bruno Ace SC'; font-size: 0.6rem; font-weight: 900; display: flex; flex-direction: column; align-items: center; gap: 8px; background: #1a1a1a; border: 1px solid #333; text-align: center; }
+        .btn-fast img { width: 22px; height: 22px; }
+        .f-sms { border-color: var(--blue); } .f-wa { border-color: var(--green); }
 
         @media (max-width: 1000px) {
             .grid-custom { grid-template-columns: repeat(2, 1fr); }
@@ -107,7 +97,7 @@
             </div>
             <div class="tile prio-3" onclick="openM('Contrôle Technique')">
                 <div class="tile-bg" style="background-image: url('images/ct.jpg');"></div>
-                <div class="label"><h3>CONTRÔLE TECHNIQUE</h3><p>PRÉ-VISITE & PASSAGE</p><span class="price">PACK COMPLET</span></div>
+                <div class="label"><h3>CONTRÔLE TECHNIQUE</h3><p>PRÉ-VISITE & PASSAGE</p><span class="price">DÈS 79€</span></div>
             </div>
             <div class="tile prio-4" onclick="openM('Mécanique')">
                 <div class="tile-bg" style="background-image: url('images/lourde.jpg');"></div>
@@ -132,38 +122,39 @@
 
     <div id="m" class="modal" onclick="closeMOutside(event)">
         <div class="modal-content" onclick="event.stopPropagation()">
-            <div id="h" style="padding:15px; border-bottom:1px solid #333; text-align:center; font-family:'Bruno Ace SC'; font-style:italic; font-size:1.1rem;">FICHE DE CONTACT</div>
-            <form class="form-container">
-                <input type="text" placeholder="Nom & Prénom" required class="full">
-                <input type="tel" placeholder="Téléphone" required>
-                
-                <select required>
+            <div id="h" style="padding:15px; border-bottom:1px solid #333; text-align:center; font-family:'Bruno Ace SC'; font-style:italic; font-size:1.1rem;">DEMANDE DE DEVIS</div>
+            <form class="form-container" id="devisForm">
+                <input type="text" id="f_nom" placeholder="Nom & Prénom" required class="full">
+                <input type="tel" id="f_tel" placeholder="Téléphone" required>
+                <select id="f_dept" required>
                     <option value="" disabled selected>Département</option>
-                    <option>18 - Cher</option><option>28 - Eure-et-Loir</option><option>45 - Loiret</option>
-                    <option>77 - Seine-et-Marne</option><option>89 - Yonne</option><option>91 - Essonne</option>
-                    <option>Autre</option>
+                    <option>18</option><option>28</option><option>45</option><option>77</option><option>89</option><option>91</option><option>Autre</option>
                 </select>
-
-                <input type="text" placeholder="Immatriculation">
-                <input type="text" placeholder="Véhicule" required>
+                <input type="text" id="f_immat" placeholder="Immatriculation">
+                <input type="text" id="f_auto" placeholder="Véhicule (Marque/Modèle)" required>
                 
-                <select>
-                    <option value="" disabled selected>Option 1...</option>
+                <select id="f_p1">
+                    <option value="" disabled selected>Prestation principale...</option>
                     <option>Solutions OFF</option><option>Entretien</option><option>Mécanique</option><option>Diagnostic</option><option>Contrôle Technique</option><option>Performance</option>
                 </select>
-                <select>
-                    <option value="" disabled selected>Option 2...</option>
+                <select id="f_p2">
+                    <option value="" disabled selected>Optionnel...</option>
                     <option>Solutions OFF</option><option>Entretien</option><option>Mécanique</option><option>Diagnostic</option><option>Contrôle Technique</option><option>Performance</option>
                 </select>
 
-                <textarea class="full" placeholder="Détails..." rows="3" required></textarea>
-                <button type="submit" class="btn-submit full">ENVOYER LA DEMANDE</button>
+                <textarea id="f_details" class="full" placeholder="Détails de votre demande..." rows="3" required></textarea>
+                
+                <button type="submit" class="btn-submit full">ENVOYER PAR MAIL</button>
                 
                 <div class="full fast-contact">
-                    <a href="tel:0641616732" class="btn-fast f-tel"><img src="https://cdn-icons-png.flaticon.com/512/724/724664.png">APPEL</a>
-                    <a href="sms:0641616732" class="btn-fast f-sms"><img src="https://cdn-icons-png.flaticon.com/512/889/889101.png">SMS</a>
-                    <a href="https://wa.me/33641616732" class="btn-fast f-wa"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">WHATSAPP</a>
+                    <a href="javascript:void(0)" onclick="sendDirect('sms')" class="btn-fast f-sms">
+                        <img src="https://cdn-icons-png.flaticon.com/512/889/889101.png">SMS DIRECT
+                    </a>
+                    <a href="javascript:void(0)" onclick="sendDirect('wa')" class="btn-fast f-wa">
+                        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">WHATSAPP
+                    </a>
                 </div>
+                <p onclick="closeM()" style="text-align:center; grid-column:span 2; cursor:pointer; font-family:'Bruno Ace SC'; opacity:0.5; font-size:0.7rem; margin-top:10px;">RETOUR</p>
             </form>
         </div>
     </div>
@@ -172,6 +163,35 @@
         function openM(t){ document.getElementById('h').innerText = t; document.getElementById('m').style.display = 'flex'; }
         function closeM(){ document.getElementById('m').style.display = 'none'; }
         function closeMOutside(e){ if(e.target.id === 'm') closeM(); }
+
+        function getFormData() {
+            const nom = document.getElementById('f_nom').value || "/";
+            const tel = document.getElementById('f_tel').value || "/";
+            const auto = document.getElementById('f_auto').value || "/";
+            const immat = document.getElementById('f_immat').value || "/";
+            const dept = document.getElementById('f_dept').value || "/";
+            const p1 = document.getElementById('f_p1').value || "/";
+            const details = document.getElementById('f_details').value || "/";
+            return `DEMANDE DE DEVIS\n\nClient : ${nom}\nTel : ${tel}\nDept : ${dept}\nVéhicule : ${auto}\nImmat : ${immat}\nPrestation : ${p1}\nInfos : ${details}`;
+        }
+
+        function sendDirect(type) {
+            const msg = getFormData();
+            const phone = "33641616732";
+            if(type === 'wa') {
+                window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`, '_blank');
+            } else {
+                window.location.href = `sms:${phone}?body=${encodeURIComponent(msg)}`;
+            }
+        }
+
+        document.getElementById('devisForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const msg = getFormData();
+            const mail = "streetracingperformances@outlook.com";
+            const sujet = "DEVIS : " + document.getElementById('f_auto').value;
+            window.location.href = `mailto:${mail}?subject=${encodeURIComponent(sujet)}&body=${encodeURIComponent(msg)}`;
+        });
     </script>
 </body>
 </html>
