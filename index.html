@@ -4,152 +4,186 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
-    <title>Street Racing Performances | Solution Adblue FAP EGR 45 | Loiret</title>
-    <meta name="description" content="Expert en Solutions OFF (Adblue, FAP, EGR) et reprogrammation moteur dans le Loiret (45). Conversion Éthanol E85, Entretien et Mécanique à Mézières-en-Gâtinais.">
-    <meta name="keywords" content="Adblue OFF 45, Problème FAP Renault, Suppression EGR Loiret, Reprogrammation moteur 45, Conversion Ethanol E85, Street Racing Performances, Mécanique Mézières-en-Gâtinais, Garage 45, Stage 1, Powerflex France">
+    <title>Street Racing Performances | Solutions OFF & Mécanique Loiret 45</title>
+    <meta name="description" content="Expert Solutions OFF (AdBlue, FAP, EGR), reprogrammation Stage 1 & 2, conversion Éthanol E85 et mécanique à Mézières-en-Gâtinais. Devis gratuit.">
+    <meta name="keywords" content="Street Racing Performances, Solutions OFF 45, Reprogrammation moteur Loiret, Conversion E85, Adblue OFF, FAP EGR, Garage Mézières-en-Gâtinais, Stage 1, Stage 2, Mécanique 45">
     <meta name="author" content="Street Racing Performances">
-    <link rel="canonical" href="https://www.streetracingperformances.fr">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.streetracingperformances.com/">
+    <meta property="og:title" content="Street Racing Performances | Performance & Solutions OFF">
+    <meta property="og:description" content="Reprogrammation, Solutions OFF et Mécanique de précision.">
+    <meta property="og:image" content="images/logo-share.jpg">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AutoRepair",
+      "name": "Street Racing Performances",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "12 Route des Nailleaux",
+        "addressLocality": "Mézières-en-Gâtinais",
+        "postalCode": "45270",
+        "addressRegion": "Loiret",
+        "addressCountry": "FR"
+      },
+      "geo": { "@type": "GeoCoordinates", "latitude": 48.0354, "longitude": 2.4923 },
+      "url": "https://www.streetracingperformances.com",
+      "telephone": "+33641616732",
+      "priceRange": "$$"
+    }
+    </script>
 
     <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        :root { --red: #ff0000; --blue: #0055ff; --gold: #ffcc00; --green: #2ecc71; --dark: #050505; --silver: #444; }
+        :root { --red: #ff0000; --blue: #007aff; --gold: #ffcc00; --green: #25d366; --dark: #050505; }
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body, html { height: 100%; font-family: 'Montserrat', sans-serif; background: var(--dark); color: white; overflow: hidden; }
+        body, html { height: 100%; font-family: 'Montserrat', sans-serif; background: var(--dark); color: white; overflow-x: hidden; }
         
-        .bg-master { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.95)), url('images/fond.jpg'); background-size: cover; background-position: center; z-index: -1; }
+        .bg-master { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.95)), url('images/fond.jpg'); background-size: cover; background-position: center; z-index: -1; }
         
-        /* HEADER PC */
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 0 4%; background: rgba(0,0,0,0.95); border-bottom: 2px solid var(--red); height: 90px; }
-        .logo { font-family: 'Bruno Ace SC', cursive; font-size: 1.5rem; text-decoration: none; font-style: italic; white-space: nowrap; display: flex; align-items: center; }
-        .logo .white-part { color: #ffffff; }
-        .logo .red-part { color: var(--red); font-weight: 900; margin-left: 12px; }
+        /* HEADER - LOGO CORRIGÉ */
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 0 20px; background: rgba(0,0,0,0.95); border-bottom: 3px solid var(--red); height: 100px; position: sticky; top: 0; z-index: 1000; }
+        .logo { font-family: 'Bruno Ace SC', cursive; text-decoration: none; font-style: italic; line-height: 1.1; flex: 1; }
+        .logo .white-part { color: #ffffff; font-weight: 400; }
+        .logo .red-part { color: var(--red); font-weight: 900; text-shadow: 2px 2px 0px rgba(0,0,0,0.3); }
 
-        .sos-gyro { width: 60px; height: 60px; border-radius: 50%; border: 3px solid white; display: flex; align-items: center; justify-content: center; text-decoration: none; animation: gyro-slow 3s infinite ease-in-out; flex-shrink: 0; }
-        .sos-gyro span { font-family: 'Bruno Ace SC'; font-weight: 900; font-size: 0.9rem; color: #ffffff !important; }
+        .sos-gyro { width: 55px; height: 55px; border-radius: 50%; border: 3px solid white; display: flex; align-items: center; justify-content: center; text-decoration: none; animation: gyro-slow 3s infinite ease-in-out; flex-shrink: 0; margin-left: 10px; }
+        .sos-gyro span { font-family: 'Bruno Ace SC'; font-weight: 900; font-size: 0.8rem; color: #ffffff; }
         @keyframes gyro-slow { 0%, 100% { background: var(--red); box-shadow: 0 0 15px var(--red); } 50% { background: var(--blue); box-shadow: 0 0 15px var(--blue); } }
 
-        .contact-bar { background: rgba(0,0,0,0.85); border-bottom: 1px solid #222; padding: 10px 4%; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; font-family: 'Bruno Ace SC'; white-space: nowrap; }
+        /* CONTACT BAR */
+        .contact-bar { background: rgba(0,0,0,0.9); border-bottom: 1px solid #333; padding: 12px 20px; display: flex; justify-content: center; align-items: center; font-size: 0.9rem; font-family: 'Bruno Ace SC'; text-align: center; font-weight: 700; }
+        .contact-bar span.sep { margin: 0 20px; color: var(--red); font-weight: 900; font-size: 1.2rem; }
+        .contact-bar a { color: var(--red); text-decoration: none; font-weight: 900; }
         
-        .wrapper { padding: 10px 4%; height: calc(100vh - 210px); display: flex; align-items: center; }
-        
-        .grid-custom { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; width: 100%; height: 100%; max-height: 65vh; }
-        .tile { position: relative; border-radius: 8px; border: 1px solid #333; cursor: pointer; background: #000; overflow: hidden; display: flex; align-items: flex-end; height: 100%; }
-        .tile-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; opacity: 0.5; transition: 0.5s; }
-        
+        /* GRID TUILES */
+        .wrapper { padding: 15px 15px 110px 15px; }
+        .grid-custom { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; }
+        .tile { position: relative; border-radius: 8px; border: 1px solid #333; cursor: pointer; background: #000; overflow: hidden; display: flex; align-items: flex-end; min-height: 250px; }
+        .tile-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; opacity: 0.5; }
         .prio-1, .prio-2 { grid-column: span 3; } 
         .prio-3, .prio-4 { grid-column: span 2; } 
         .prio-5, .prio-6 { grid-column: span 1; }
-
         .label { position: relative; width: 100%; padding: 15px; background: linear-gradient(transparent, rgba(0,0,0,0.95)); z-index: 2; }
-        .label h3 { font-family: 'Bruno Ace SC'; font-size: 0.85rem; font-style: italic; line-height: 1.1; }
-        .price { color: var(--gold); font-family: 'Bruno Ace SC'; font-size: 0.9rem; font-weight: 900; }
+        .label h3 { font-family: 'Bruno Ace SC'; font-size: 0.9rem; font-style: italic; }
+        .price { color: var(--gold); font-family: 'Bruno Ace SC'; font-size: 0.8rem; font-weight: 900; }
 
-        .review-footer { position: fixed; bottom: 0; width: 100%; background: #000; border-top: 2px solid var(--red); height: 60px; display: flex; align-items: center; justify-content: space-between; z-index: 100; }
-        .btn-avis-split { width: 150px; height: 100%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-family: 'Bruno Ace SC'; font-size: 0.7rem; font-weight: 900; }
+        /* FOOTER AVIS */
+        .review-footer { position: fixed; bottom: 0; width: 100%; background: rgba(0,0,0,0.98); border-top: 2px solid var(--red); height: 80px; display: flex; align-items: center; justify-content: space-between; padding: 0 25px; z-index: 100; }
+        .btn-avis-footer { background: #111; border: 1px solid #444; color: white; text-decoration: none; padding: 12px 18px; border-radius: 4px; font-family: 'Bruno Ace SC'; font-size: 0.65rem; font-weight: 900; }
 
-        /* MODAL */
-        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.98); z-index: 999; align-items: center; justify-content: center; padding: 10px; }
-        .modal-content { background: #0c0c0c; border: 1.5px solid var(--silver); width: 100%; max-width: 500px; border-radius: 12px; max-height: 95vh; overflow-y: auto; padding: 20px; }
-        .form-container { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-        .full { grid-column: span 2; }
-        
-        input, select, textarea { width: 100%; background: #1a1a1a; border: 1px solid #333; padding: 12px; color: white; border-radius: 6px; font-size: 0.9rem; }
-        .btn-submit { background: var(--red); color: white; border: none; padding: 15px; width: 100%; font-family: 'Bruno Ace SC'; font-weight: 900; cursor: pointer; border-radius: 6px; }
-
-        /* TEXTE SEO CACHÉ POUR GOOGLE */
-        .seo-hidden { position: absolute; left: -9999px; }
-
+        /* RESPONSIVE */
         @media (max-width: 900px) {
-            body, html { overflow-y: auto; }
-            .wrapper { height: auto; padding-bottom: 80px; align-items: flex-start; }
-            .grid-custom { grid-template-columns: repeat(2, 1fr); height: auto; max-height: none; gap: 10px; }
-            .tile { height: 185px; }
-            .prio-1, .prio-2, .prio-3, .prio-4, .prio-5, .prio-6 { grid-column: span 1; }
+            nav { height: 85px; }
             .logo { font-size: 1.1rem; }
-            .contact-bar { font-size: 0.52rem; padding: 8px 4%; }
-            nav { height: 75px; }
+            .contact-bar { flex-direction: column; gap: 8px; font-size: 0.75rem; }
+            .contact-bar span.sep { display: none; }
+            .grid-custom { grid-template-columns: repeat(2, 1fr); }
+            .tile { min-height: 175px; grid-column: span 1 !important; }
         }
+        @media (min-width: 901px) {
+            .logo { font-size: 2rem; }
+            .logo br { display: none; } 
+            .contact-bar { flex-direction: row; font-size: 1rem; }
+        }
+
+        /* MODAL & FORMULAIRE */
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.98); z-index: 9999; align-items: center; justify-content: center; padding: 10px; }
+        .modal-content { background: #0c0c0c; border: 1.5px solid #333; width: 100%; max-width: 500px; border-radius: 12px; max-height: 95vh; overflow-y: auto; padding: 25px; }
+        .form-container { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .full { grid-column: span 2; }
+        input, select, textarea { width: 100%; background: #181818; border: 1px solid #333; padding: 12px; color: white; border-radius: 6px; font-size: 0.9rem; }
+        .direct-contact { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 15px; }
+        .btn-c { padding: 15px; border-radius: 6px; text-decoration: none; display: flex; align-items: center; justify-content: center; font-family: 'Bruno Ace SC'; font-size: 0.8rem; color: white; font-weight: 900; border: 1px solid #444; }
+        .wa-c { background: #25d36633; border-color: var(--green); }
+        .sms-c { background: #007aff33; border-color: var(--blue); }
+        .mail-c { background: #ff000033; border-color: var(--red); }
     </style>
 </head>
 <body>
-    <div class="seo-hidden">
-        <h1>Garage Street Racing Performances - Spécialiste Adblue OFF et FAP 45</h1>
-        <p>Vous cherchez une solution définitive pour vos problèmes d'Adblue, de FAP ou de vanne EGR ? Situé à Mézières-en-Gâtinais dans le Loiret (45), notre garage intervient sur toutes marques (Renault, Peugeot, Audi, BMW, Mercedes) pour supprimer les modes dégradés. Nous proposons également la reprogrammation moteur Stage 1, Stage 2 et la conversion Bio-Éthanol E85 pour réduire votre budget carburant. Mécanique générale : kit de distribution, embrayage renforcé, freinage et pose de silentblocs Powerflex.</p>
-    </div>
 
     <div class="bg-master"></div>
+
     <nav>
-        <a href="#" class="logo"><span class="white-part">STREET RACING</span><span class="red-part">PERFORMANCES</span></a>
+        <a href="#" class="logo">
+            <span class="white-part">STREET&nbsp;RACING</span><br><span class="red-part">&nbsp;PERFORMANCES</span>
+        </a>
         <a href="tel:0641616732" class="sos-gyro"><span>SOS</span></a>
     </nav>
+
     <div class="contact-bar">
-        <div>📍 12 ROUTE DES NAILLEAUX, 45270 MÉZIÈRES-EN-GÂTINAIS</div>
-        <a href="tel:0641616732" style="color:var(--red); text-decoration:none; font-weight:900;">06 41 61 67 32</a>
+        <span>📍 12 ROUTE DES NAILLEAUX, MÉZIÈRES-EN-GÂTINAIS</span>
+        <span class="sep">|</span>
+        <a href="tel:0641616732">📞 06 41 61 67 32</a>
     </div>
 
     <div class="wrapper">
         <div class="grid-custom">
             <div class="tile prio-1" onclick="openM('Solutions OFF')"><div class="tile-bg" style="background-image: url('images/off.jpg');"></div><div class="label"><h3>SOLUTIONS OFF</h3><span class="price">DÈS 249€</span></div></div>
-            <div class="tile prio-2" onclick="openM('Entretien')"><div class="tile-bg" style="background-image: url('images/entretien.jpg');"></div><div class="label"><h3>ENTRETIEN MOTEUR</h3><span class="price">DÈS 129€</span></div></div>
+            <div class="tile prio-2" onclick="openM('Entretien / Révision')"><div class="tile-bg" style="background-image: url('images/entretien.jpg');"></div><div class="label"><h3>ENTRETIEN / RÉVISION</h3><span class="price">DÈS 129€</span></div></div>
             <div class="tile prio-3" onclick="openM('Contrôle Technique')"><div class="tile-bg" style="background-image: url('images/ct.jpg');"></div><div class="label"><h3>CONTRÔLE TECHNIQUE</h3><span class="price">DÈS 79€</span></div></div>
             <div class="tile prio-4" onclick="openM('Mécanique')"><div class="tile-bg" style="background-image: url('images/lourde.jpg');"></div><div class="label"><h3>MÉCANIQUE</h3><span class="price">SUR DEVIS</span></div></div>
-            <div class="tile prio-5" onclick="openM('Diagnostic')"><div class="tile-bg" style="background-image: url('images/diag.jpg');"></div><div class="label"><h3>DIAG / VALISE</h3><span class="price">DÈS 50€</span></div></div>
+            <div class="tile prio-5" onclick="openM('Diagnostic')"><div class="tile-bg" style="background-image: url('images/diag.jpg');"></div><div class="label"><h3>DIAGNOSTIC</h3><span class="price">DÈS 50€</span></div></div>
             <div class="tile prio-6" onclick="openM('Performances')"><div class="tile-bg" style="background-image: url('images/stages.jpg');"></div><div class="label"><h3>PERFORMANCES</h3><span class="price">DÈS 390€</span></div></div>
         </div>
     </div>
 
     <footer class="review-footer">
-        <a href="https://search.google.com/local/writereview?placeid=ChIJzWzQOqjbH6QRWAM3SJgWxt0" target="_blank" class="btn-avis-split" style="background:var(--green); color:white;">LAISSER UN AVIS</a>
-        <a href="https://www.google.com/maps/place/?q=place_id:ChIJzWzQOqjbH6QRWAM3SJgWxt0" target="_blank" class="btn-avis-split" style="background:var(--gold); color:black;">VOIR LES AVIS</a>
+        <a href="https://search.google.com/local/writereview?placeid=ChIJzWzQOqjbH6QRWAM3SJgWxt0" target="_blank" class="btn-avis-footer">LAISSER UN AVIS</a>
+        <a href="https://www.google.com/maps/place/?q=place_id:ChIJzWzQOqjbH6QRWAM3SJgWxt0" target="_blank" class="btn-avis-footer">VOIR LES AVIS</a>
     </footer>
 
     <div id="m" class="modal" onclick="closeMOutside(event)">
         <div class="modal-content" onclick="event.stopPropagation()">
-            <h2 id="h" style="text-align:center; font-family:'Bruno Ace SC'; margin-bottom:15px; font-style:italic; font-size:1rem;">DEMANDE DE DEVIS</h2>
-            <form class="form-container" id="devisForm">
-                <input type="text" id="f_nom" placeholder="Nom & Prénom" required class="full">
-                <input type="tel" id="f_tel" placeholder="Téléphone" required>
-                <select id="f_dept" required>
+            <h2 id="h" style="text-align:center; font-family:'Bruno Ace SC'; margin-bottom:15px; color:var(--red); font-style:italic; font-size:1.1rem;">DEVIS GRATUIT</h2>
+            <form class="form-container">
+                <input type="text" id="f_nom" placeholder="Nom & Prénom" class="full">
+                <input type="tel" id="f_tel" placeholder="Téléphone">
+                <select id="f_dept">
                     <option value="" disabled selected>Département</option>
-                    <option>18 - Cher</option><option>28 - Eure-et-Loir</option><option>45 - Loiret</option><option>77 - Seine-et-Marne</option><option>89 - Yonne</option><option>91 - Essonne</option><option>Autre</option>
+                    <option>18 - Cher</option><option>28 - Eure-et-Loir</option><option>45 - Loiret</option><option>77 - Seine-et-Marne</option><option>89 - Yonne</option><option>91 - Essonne</option>
                 </select>
-                <input type="text" id="f_immat" placeholder="Immatriculation">
-                <input type="text" id="f_auto" placeholder="Véhicule (Marque / Modèle)" required>
+                <input type="text" id="f_immat" placeholder="Immatriculation" class="full">
+                <input type="text" id="f_auto" placeholder="Véhicule (ex: Audi A3 2.0 TDI)" class="full">
                 
                 <select id="f_p1" class="full">
-                    <option value="" disabled selected>Prestation principale...</option>
-                    <option>+ Solutions OFF (Adblue / FAP / EGR)</option>
-                    <option>+ Performances (Stage 1 / 2 / 3)</option>
-                    <option>+ Conversion Éthanol E85</option>
+                    <option value="" disabled selected>+ Prestation principale...</option>
+                    <option>+ Solutions OFF (Adblue/FAP/EGR)</option>
                     <option>+ Entretien / Vidange / Révision</option>
                     <option>+ Mécanique (Distrib / Embrayage)</option>
-                    <option>+ Diagnostic Valise Électronique</option>
-                    <option>+ Contrôle Technique (Pack 79€)</option>
+                    <option>+ Conversion Éthanol E85</option>
+                    <option>+ Stage 1 / Stage 2 Performance</option>
                 </select>
-                
+
                 <select id="f_p2" class="full">
-                    <option value="Aucune">Option Informatique (Facultatif)</option>
-                    <option>+ Solutions OFF (Adblue/FAP)</option>
-                    <option>+ Stage Performance</option>
-                    <option>+ Conversion E85 / Flexfuel</option>
-                    <option>+ Suppression Code Défaut (DTC)</option>
+                    <option value="Aucune">+ Option Informatique (Facultatif)</option>
+                    <option>+ Diagnostic & Recherche de panne</option>
+                    <option>+ Conversion E85 Simple</option>
+                    <option>+ Flexfuel E85 + Stage 1</option>
+                    <option>+ Stage 1 / Stage 2 Performance</option>
+                    <option>+ Solutions OFF (DTC / FAP / ADBLUE)</option>
                 </select>
 
                 <select id="f_p3" class="full">
-                    <option value="Aucune">Option Entretien & Mécanique (Facultatif)</option>
-                    <option>+ Vidange / Révision complète</option>
-                    <option>+ Distribution / Pompe à eau</option>
-                    <option>+ Kit Embrayage / Volant moteur</option>
-                    <option>+ Freinage (Plaquettes / Disques)</option>
-                    <option>+ Amortisseurs / Liaisons au sol</option>
-                    <option>+ Passage au Contrôle Technique</option>
+                    <option value="Aucune">+ Option Mécanique (Facultatif)</option>
+                    <option>+ Kit Distribution + Pompe à eau</option>
+                    <option>+ Kit Embrayage + Volant Moteur</option>
+                    <option>+ Freinage (Disques / Plaquettes)</option>
+                    <option>+ Amortisseurs / Ressorts courts</option>
+                    <option>+ Ligne Échappement / Downpipe</option>
+                    <option>+ Admission Sport / Intercooler</option>
+                    <option>+ Turbocompresseur Performance</option>
                 </select>
 
-                <textarea id="f_details" class="full" placeholder="Détails (Année, motorisation, demande particulière...)" rows="2"></textarea>
-                <button type="submit" class="btn-submit full">ENVOYER LE DEVIS</button>
-                <div class="full" style="display:flex; gap:8px; margin-top:8px;">
-                    <button type="button" onclick="sendDirect('sms')" style="flex:1; background:#1a1a1a; border:1px solid var(--blue); color:white; padding:10px; border-radius:6px; font-family:'Bruno Ace SC'; font-size:0.65rem; display:flex; align-items:center; justify-content:center; gap:5px;"><span>💬</span> SMS</button>
-                    <button type="button" onclick="sendDirect('wa')" style="flex:1; background:#1a1a1a; border:1px solid var(--green); color:white; padding:10px; border-radius:6px; font-family:'Bruno Ace SC'; font-size:0.65rem; display:flex; align-items:center; justify-content:center; gap:5px;"><span>📱</span> WHATSAPP</button>
+                <textarea id="f_details" class="full" placeholder="Décrivez votre demande ici..." rows="3"></textarea>
+
+                <div class="direct-contact full">
+                    <a href="javascript:void(0)" onclick="sendFinal('wa')" class="btn-c wa-c">WHATSAPP</a>
+                    <a href="javascript:void(0)" onclick="sendFinal('sms')" class="btn-c sms-c">SMS</a>
+                    <a href="javascript:void(0)" onclick="sendFinal('mail')" class="btn-c mail-c full" style="margin-top:5px">ENVOYER PAR EMAIL</a>
                 </div>
             </form>
         </div>
@@ -159,16 +193,17 @@
         function openM(t){ document.getElementById('h').innerText = t; document.getElementById('m').style.display = 'flex'; }
         function closeM(){ document.getElementById('m').style.display = 'none'; }
         function closeMOutside(e){ if(e.target.id === 'm') closeM(); }
-        function getFormData() { return `STREET RACING DEVIS\nClient: ${document.getElementById('f_nom').value}\nTel: ${document.getElementById('f_tel').value}\nVéhicule: ${document.getElementById('f_auto').value}\nPresta: ${document.getElementById('f_p1').value}\nOpt Info: ${document.getElementById('f_p2').value}\nOpt Méca: ${document.getElementById('f_p3').value}\nInfos: ${document.getElementById('f_details').value}`; }
-        function sendDirect(type) {
-            const msg = getFormData();
-            if(type === 'wa') window.open(`https://wa.me/33641616732?text=${encodeURIComponent(msg)}`, '_blank');
-            else window.location.href = `sms:33641616732?body=${encodeURIComponent(msg)}`;
+
+        function getFormData() { 
+            return `DEMANDE DEVIS SRP\n\nClient: ${document.getElementById('f_nom').value}\nTel: ${document.getElementById('f_tel').value}\nDept: ${document.getElementById('f_dept').value}\nImmat: ${document.getElementById('f_immat').value}\nAuto: ${document.getElementById('f_auto').value}\nPresta: ${document.getElementById('f_p1').value}\nInfo: ${document.getElementById('f_p2').value}\nMéca: ${document.getElementById('f_p3').value}\nMessage: ${document.getElementById('f_details').value}`; 
         }
-        document.getElementById('devisForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            window.location.href = `mailto:streetracingperformances@outlook.com?subject=Devis ${document.getElementById('f_auto').value}&body=${encodeURIComponent(getFormData())}`;
-        });
+        
+        function sendFinal(method) {
+            const msg = getFormData();
+            if(method === 'mail') window.location.href = `mailto:streetracingperformances@outlook.com?subject=Devis SRP&body=${encodeURIComponent(msg)}`;
+            if(method === 'sms') window.location.href = `sms:33641616732?body=${encodeURIComponent(msg)}`;
+            if(method === 'wa') window.open(`https://wa.me/33641616732?text=${encodeURIComponent(msg)}`, '_blank');
+        }
     </script>
 </body>
 </html>
